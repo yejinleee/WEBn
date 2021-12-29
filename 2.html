@@ -2,15 +2,58 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>WEB1 - HTML</title>
+    <title>WEBn</title>
+    <style>
+      a {
+        color:black;
+        text-decoration: none;
+      }
+      h1 {
+        text-align: center;
+        border-bottom :1px solid gray;
+        margin : 0;
+        padding : 14px;
+      }
+      ul{
+        border-right:1px solid gray;
+        width : 100px;
+        margin : 0;
+        padding:20px;
+      }
+      #grid{
+        display: grid;
+        grid-template-columns: 150px 1fr;
+      }
+      #grid ul{
+        padding-left:13px;
+      }
+      @media(max-width:800px) {
+        #grid{
+          display: block;
+        }
+        ul{
+          border-right:none;
+        }
+        h1{
+          border-bottom: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <ul>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-    </ul>
-    <h1>CSS</h1>
+    <div id="grid">
+      <ul>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ul>
+      <div>
+      <h2>CSS</h2>
+      <p>
+      CSS의 C가 Cascading의 약자인데, 이는 상위 요소의 스타일 속성을 자손 요소들에게 상속시켜주는 모습이 DOM 트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.[1]
+      </p>
+      </div>
+    </div>
   </body>
 </html>
