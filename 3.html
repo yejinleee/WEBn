@@ -5,32 +5,32 @@
     <title>WEBn</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script>
+      function setLinksColor(color){
+        var links = document.querySelectorAll('a');
+        var i = 0;
+        while(i<links.length){
+          links[i].style.color=color;
+          i+=1;
+        }
+      }
+      function setTargetColor(backcolor,color){
+        document.querySelector('body').style.backgroundColor=backcolor;
+        document.querySelector('body').style.color=color;
+      }
       function NightDayHandler(self){
         var target = document.querySelector('body')
         if(self.value === 'night'){
-          target.style.backgroundColor='black';
-          target.style.color='white';
+          setTargetColor('black','white');
           self.value = 'day';
-
-          var links = document.querySelectorAll('a');
-          var i =0;
-          while(i<links.length){
-            links[i].style.color='powderblue';
-            i+=1;
-          }
+          setLinksColor('powderblue')
         }
         else{
-          target.style.backgroundColor='white';
-          target.style.color='black';
+          setTargetColor('white','black');
           self.value = 'night';
-          var links = document.querySelectorAll('a');
-          var i =0;
-          while(i<links.length){
-            links[i].style.color='blue';
-            i+=1;
-          }
+          setLinksColor('blue')
         }
       }
+
     </script>
   </head>
   <body>
@@ -46,7 +46,8 @@
     <input type="button" name="" value="night" onclick="
       NightDayHandler(this)
     ">
-
+    <- 함수화
+    <br>
     <input type="button" name="" value="night" onclick="
       var target = document.querySelector('body')
       if(this.value === 'night'){
