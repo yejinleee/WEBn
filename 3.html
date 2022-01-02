@@ -5,29 +5,33 @@
     <title>WEBn</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <script>
-      function setLinksColor(color){
-        var links = document.querySelectorAll('a');
-        var i = 0;
-        while(i<links.length){
-          links[i].style.color=color;
-          i+=1;
+      var Links = {
+        setLinksColor:function (color){
+          var links = document.querySelectorAll('a');
+          var i = 0;
+          while(i<links.length){
+            links[i].style.color=color;
+            i+=1;
+          }
         }
       }
-      function setTargetColor(backcolor,color){
-        document.querySelector('body').style.backgroundColor=backcolor;
-        document.querySelector('body').style.color=color;
+      var Body = {
+        setTargetColor:function (backcolor,color){
+          document.querySelector('body').style.backgroundColor=backcolor;
+          document.querySelector('body').style.color=color;
+        }
       }
       function NightDayHandler(self){
         var target = document.querySelector('body')
         if(self.value === 'night'){
-          setTargetColor('black','white');
+          Body.setTargetColor('black','white');
           self.value = 'day';
-          setLinksColor('powderblue')
+          Links.setLinksColor('powderblue')
         }
         else{
-          setTargetColor('white','black');
+          Body.setTargetColor('white','black');
           self.value = 'night';
-          setLinksColor('blue')
+          Links.setLinksColor('blue')
         }
       }
 
@@ -35,47 +39,9 @@
   </head>
   <body>
     <h1><a href="index.html">WEB</a></h1>
-    <!-- <input type="button" name="" value="night" onclick="
-      document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('body').style.color='white';
-    ">
-    <input type="button" name="" value="day" onclick="
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black';
-    "> -->
     <input type="button" name="" value="night" onclick="
       NightDayHandler(this)
     ">
-    <- 함수화
-    <br>
-    <input type="button" name="" value="night" onclick="
-      var target = document.querySelector('body')
-      if(this.value === 'night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        this.value = 'day';
-
-        var links = document.querySelectorAll('a');
-        var i =0;
-        while(i<links.length){
-          links[i].style.color='powderblue';
-          i+=1;
-        }
-      }
-      else{
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        this.value = 'night';
-        var links = document.querySelectorAll('a');
-        var i =0;
-        while(i<links.length){
-          links[i].style.color='blue';
-          i+=1;
-        }
-      }
-    ">
-
-
     <div id="grid">
       <ul>
         <li><a href="1.html">HTML</a></li>
@@ -87,21 +53,7 @@
       </div>
       <p>
       <span id="first" class="js">JavaScript</span> (JS)는 가벼운, 인터프리터 혹은 just-in-time 컴파일 프로그래밍 언어로, 일급 함수를 지원합니다. 웹 페이지를 위한 스크립트 언어로 잘 알려져 있지만, Node.js, Apache CouchDB, Adobe Acrobat처럼 많은 비 브라우저 환경에서도 사용하고 있습니다. <span class="js">JavaScript</span>는 프로토타입 기반, 다중 패러다임, 단일 스레드, 동적 언어로, 객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다. 자세한 내용은 <span class="js">JavaScript</span>에 대하여를 참고하세요.
-    </p>
+      </p>
     </div>
-
-    <input id="night_day" type="button" name="" value="night" onclick="
-      if(document.querySelector('#night_day').value === 'night'){
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-        document.querySelector('#night_day').value = 'day';
-
-      }
-      else{
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-        document.querySelector('#night_day').value = 'night';
-      }
-    ">
   </body>
 </html>
