@@ -3,36 +3,76 @@
   <head>
     <meta charset="utf-8">
     <title>CSS_Guide</title>
-    <style>
-      div{
-        border:1px solid red;
-      }
-      span{
-        border:1px solid blue;
-      }
-      #grid{
-        display: grid;
-        grid-template-columns: 150px 1fr;
-      }
-    </style>
+    <link rel="stylesheet" href="./css/display.css">
   </head>
+  <style media="screen">
+  .ex-layout{ height: 310px }
+  .menu{
+  width: 300px;
+  height: 40px;
+  border: 2px solid #09c;
+  background-color: #d7f5ff;
+  }
+  .main .left-menu{
+  float: left;
+  width: 50px;
+  height: 254px;
+  border: 2px solid red;
+  background-color: #ffe7d5;
+  }
+  .main .content{
+  float: left;
+  width: 250px;
+  height: 250px;
+  }
+  .main .content .article{
+  height: 200px;
+  border: 2px solid blue;
+  background-color: #e2e9ff;
+  }
+  .main .content .comment{
+  height: 50px;
+  border: 2px solid purple;
+  background-color: #ffddff;
+  }
+  </style>
   <body>
-    <div>div</div>
-    <span>span1</span>
+    <img src="./img/back.png" alt="BACK" onclick="history.back(-1)" style="width:20px; height:20px; cursor:pointer; border: 1px solid grey; padding:4px; border-radius :30%;">
+    <h2>DISPLAY</h2>
+    Display is key to layout of a page<br>
+    • The display property is the most important CSS property for controlling layout<br>
+    • The display property specifies if/how an element is displayed<br>
+    • Display affects the layout of neighboring elements<br><br>
+    <h3>Block & Inline</h3>
+    <div>div 한줄을 차지합니다. 가로세로 지정가능 </div>
+    <br>
+    <span>span1 줄바꿈이 되지 않습니다. 가로세로 지정불가</span>
     <span>span2</span>
     <span>span3</span>
+    <h5>어느 태그에서든 css에서 display속성을 이용할 수 있다.</h5>
+    <p id="block">display:block (div,p,h 등) 가로세로 지정가능</p>
+    <p id="inline">display:inline (span, a 등) 가로세로 지정불가</p>
+    <p id="inline-block">display:inline-block 줄바꿈이되지않고 가로세로 지정가능</p>
     <p>Tag < p > </p>
-    <div id="grid">
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-      </ul>
-      <div>
-        <h2>CSS</h2>
-        <p>
-        CSS의 C가 Cascading의 약자인데, 이는 상위 요소의 스타일 속성을 자손 요소들에게 상속시켜주는 모습이 DOM 트리구조에서 마치 폭포수처럼 내려가는 모습을 닮았기 때문이다.[1]
-        </p>
-      </div>
+    <h3>Float & Clear</h3>
+    <div class="floatDiv1">
+      <h4 class="floatleft">floatleft</h4>
+      This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.
+    </div>
+    <div class="floatDiv">
+      <h4 class="floatright">floatright</h4>
+      This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.This is some text. This is some text. This is some text.
+    </div>
+    <!-- <div class="ex-layout">
+  		<div class="menu">global menu</div>
+  		<div class="main">
+  			<div class="left-menu">left menu</div>
+  			<div class="content">
+  				<div class="article">article</div>
+  				<div class="comment">comment</div>
+  			</div>
+  		</div>
+  	</div> -->
+    <a href="grid.html">GRID 더 알아보기</a>
   </body>
 </html>

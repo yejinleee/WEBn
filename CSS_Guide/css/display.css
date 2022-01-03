@@ -1,0 +1,51 @@
+div{
+  border:1px solid red;
+}
+span{
+  border:1px solid blue;
+  width: 100px;
+  height: 100px;
+}
+p{
+  border:1px solid green;
+}
+#block{
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+#inline{
+  display: inline;
+}
+#inline-block{
+  display: inline-block;
+  width:450px
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+.floatDiv1{
+  border: none;
+  float:left;
+  width:49%
+}
+.floatDiv{
+  border:none;
+  padding-left: 1%;
+  border-left: 1px solid grey;
+  float:right;
+  width:49%;
+}
+.floatleft{
+  float:left;
+  margin:0;
+  background: yellow;
+}
+.floatright{
+  float:right;
+  margin:0;
+  background: yellow;
+}
