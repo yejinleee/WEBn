@@ -4,14 +4,23 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body style="padding-left:250px">
     <img src="./img/back.png" alt="BACK" onclick="history.back(-1)" style="width:20px; height:20px; cursor:pointer; border: 1px solid grey; padding:4px; border-radius :30%;">
+    <aside id="sidebar" style="overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    width: 270px;
+    position: absolute;
+    padding: 25px 0;
+    box-sizing: border-box;
+    z-index: 9997;">
+      asdf
+    </aside>
     <h2>SIZE</h2>
     <h3>font-size:</h3>
     <div style="font-size:10px">10px 상위태그
       <p style="font-size:1.5em">1.5em em은 상위요소에 대해 몇배인지.</p>
       <p style="font-size:1.5rem">1.5rem rem은 html태그에 대해 몇배인지. html태그 디폴트16px</p>
     </div>
-
   </body>
 </html>
