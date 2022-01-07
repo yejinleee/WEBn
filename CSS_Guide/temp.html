@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    #outer{
+      background-color:pink;
+      display:flex;
+      height:150px;
+    }
+    #inner{
+      background-color:skyblue;
+      display:block; margin:0 auto;
+      height:150px;
+    }
+  </style>
+  <body>
+    <h2>Temporary pieces</h2>
+    <h3>가운데 정렬</h3>
+    <div id="outer">
+      <div id="inner">
+        display:block; margin:0 auto
+      </div>
+    </div>
+    <br>
+    <div id="outer">
+      <span id="inner">
+        이거는 span인데 outer가 display:flexㄹ로 두니까 세로조정이 됨! display:block; margin:0 auto
+      </span>
+    </div>
+
+  </body>
+</html>

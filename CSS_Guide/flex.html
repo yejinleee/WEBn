@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    .container{
+      background:pink;
+      display:flex;
+      width :105px;
+      height: 105px;
+      flex-wrap: wrap;
+
+    }
+    .item{
+      background:skyblue;
+      margin:5px;
+    }
+  </style>
+  <body>
+    <h2>FLEX</h2>
+    <h3>.container{display:flex}</h3>
+    <div class="container">
+    	<div class="item">item1</div>
+    	<div class="item">item2</div>
+    	<div class="item">item3</div>
+    </div>
+    flex 안의 item들은 가로방향배치, width는 각각의 내용만큼 (inline태그처럼), height는 .container만큼(align-items로 변경가능)<br>
+    <strong>inline-flex</strong>은 전체 컨테이너를 inline처럼 내용만큼만 길이차지하도록 설정 <br>
+    중앙정렬 : justify-content: center;  align-item: center;
+    <h4>추가적으로 flex 설정들</h4>
+    <li>flex-direction : 배치방향설정 <br>
+    row:왼쪽부터, row-reverse:오른쪽부터, columns:위에서아래로, columns-reverse:아래서위로</li>
+</body>
+</html>
