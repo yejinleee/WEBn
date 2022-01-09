@@ -5,10 +5,50 @@
     <title>GRID</title>
     <script type="text/javascript" src="grid.js"></script>
     <link rel="stylesheet" href="./css/grid.css">
+    <style media="screen">
+      /* body {
+        width: 500px;
+        margin: 0 auto;
+      } */
+      .each{
+        display: flex;
+      }
+      .border_each{
+        width:500px;
+        border:1px solid grey;
+      }
+      .explain_each{
+        margin: 0 auto;
+      }
+      p {
+        background-color: rgb(207,232,220);
+        border: 2px solid rgb(79,185,227);
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
     <img src="./img/back.png" alt="BACK" onclick="history.back(-1)" style="width:20px; height:20px; cursor:pointer; border: 1px solid grey; padding:4px; border-radius :30%;">
     <h2>POSITION</h2>
+    <div class="each">
+      <div class="border_each">
+        <h3>Positioning</h3>
+        <p>I am a basic block level element.</p>
+        <p class="positioned">I am a basic block level element.</p>
+        <p>I am a basic block level element.</p>
+      </div>
+      <div class="explain_each">
+        설명을 쓰고싶은데용
+      </div>
+    </div>
 
+
+    정적 포지셔닝는 모든 요소에 기본값으로 부여된 속성이다. 즉, "문서 레이아웃 대열에 속하는 요소를 기존의 일반 위치에 들여놓는 것으로 여기서 특별할 것은 없다."라는 것을 의미한다.
+    상대 포지셔닝페이지상의 요소 위치를 수정하여 그것을 보통 흐름(normal flow)상의 기존 위치와 비례해 이동토록 하는 것으로 페이지의 다른 요소와 겹치는 것도 해당한다.
+    절대 포지셔닝는 요소를 페이지의 일반 레이아웃 대열에서 완전히 벗어난 곳으로 이동시켜 자체적인 개별 레이어 상에 놓는 것과 같다. 그곳으로부터 페이지의 <html> 요소(또는 가장 근접 위치에 있는 조상 요소)의 가장자리 기준에서 비례하는 위치에 고정할 수 있다. 이것은 다른 콘텐츠 패널이 서로 다른 요소 위에 놓여야 하는 동시에 표시 및 감추기를 맘대로 하는 탭 상자의 경우나 기본적으로 화면에서 벗어나지만 컨트롤 단추를 사용하여 화면상에 슬라이더 전환이 되도록 만들어진 정보 패널과 같은 복잡한 레이아웃 효과를 만드는 데 유용하다.
+    고정 포지셔닝는 다른 요소가 아닌 브라우저 뷰포트 기준과 비례해 요소를 고정하는 것을 제외하고는 절대 포지셔닝와 매우 유사합니다. 이것은 나머지 콘텐츠 부분이 스크롤해야 보이는 화면 상에서 항상 동일한 위치에 머물러야 하는 영구적인 탐색 메뉴와 같은 효과를 만드는 데 유용합니다.
+    스티키 포지셔닝는 하나의 요소를 position: static와 같이 작동하다가 뷰포트 기준에서 사전에 정의된 간격띄우기 지점에 도달한 순간 이후부터는 position: fixed와 같이 같이 작동하는 새로운 포지셔닝 메서드이다.
   </body>
 </html>
