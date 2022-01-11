@@ -1,0 +1,36 @@
+.each{
+  display: grid;
+  grid-template-columns: 550px auto;
+}
+.border_each{
+  width:500px;
+  border:1px solid grey;
+}
+.explain_each{
+  margin: 0 auto;
+}
+p:not(#fixed ~p) {
+  background-color: rgb(182,234,255);
+  border: 2px solid rgb(79,185,227);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+.positioned{
+  background-color: rgb(255,185,185);
+}
+#relative{
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+#absolute{
+  position: absolute;
+  top:0px;
+  right: 0px;
+}
+#fixed{
+  position: fixed;
+  bottom: 30px;
+  right: 20%;
+}
