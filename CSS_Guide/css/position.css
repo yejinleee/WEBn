@@ -17,7 +17,7 @@ p:not(#fixed ~p) {
   border-radius: 5px;
 }
 .positioned{
-  background-color: rgb(255,185,185);
+  background-color: rgb(255,185,185) !important;
 }
 #relative{
   position: relative;
@@ -33,4 +33,16 @@ p:not(#fixed ~p) {
   position: fixed;
   bottom: 30px;
   right: 20%;
+}
+#sticky_content{
+  height: 100px;
+  overflow: scroll;
+}
+#sticky_parent{
+  background-color: rgb(182,234,255);
+}
+#sticky{
+  position: sticky;
+  background-color: rgb(255,185,185);
+  top:10px;
 }

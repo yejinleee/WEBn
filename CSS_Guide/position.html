@@ -17,7 +17,7 @@
         <p>I am a basic block level element.</p>
       </div>
       <div class="explain_each">
-        설명을 쓰고싶은데용
+
       </div>
     </div>
     <br>
@@ -58,6 +58,30 @@
         fixexd 된 div 는 더이상 width:100%가 아님<br>
         화면 전체 기준이다..^
       </div>
+    </div>
+    <br>
+    <div class="each">
+      <div class="border_each">
+        <h3>sticky</h3>
+        <div id="sticky_content">
+          <div id="sticky_parent">
+            Sticky's parent
+            <div id="sticky">
+              sticky
+            </div>
+            Sticky's parent <br>
+            Sticky's parent <br>
+            Sticky's parent<br>
+
+          </div>
+          <div id="not_sticky_parent">
+            It's not a sticky's parent
+          </div>
+          Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus.
+        </div>
+    </div>
+    <div class="explain_each">
+      뷰포트 전체가 기준인 fixed와 다르게 sticky는 부모 태그 안에서만 고정됩니다.<br>스크롤하여 화면이 부모 영역을 벗어나게 되면 그에 따라 sticky 설정된 영역도 보이지 않게 됩니다.<br>꼭 ! top, right, left, bottom 과 같은 위치 지정을 해주어야 합니다.
     </div>
   </body>
 </html>
