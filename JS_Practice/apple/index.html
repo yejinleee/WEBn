@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+    <!-- <script type="text/javascript" src="jsjs.js"></script> -->
+    <script>
+      function getalert(self){
+        var target = document.getElementsByClassName('alert-box')[0]
+        if (target.style.display=='block'){
+          target.style.display='none';
+        }
+        else{
+          target.style.display='block';
+        }
+      }
+      function makeAlert(content){
+        document.getElementById('alert_content').innerHTML = content;
+        document.getElementById('alert').style.display = 'block';
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick=makeAlert('경고1!!')>버튼1</button>
+    <button type="button" onclick=makeAlert('경고2!!')>버튼2</button>
+    <div class="alert-box" id="alert">
+      <p id="alert_content">Alert 내용</p>
+      <button type="button" id="close" onclick=getalert(this)>X</button>
+    </div>
+    <button type="button" onclick=getalert(this)>버튼</button>
+  </body>
+</html>

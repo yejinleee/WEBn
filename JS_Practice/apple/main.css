@@ -1,0 +1,11 @@
+.alert-box{
+  background: skyblue;
+  color:black;
+  padding: 20px;
+  border-radius: 5px;
+}
+#close{
+  position: relative;
+  right: -20px;
+  background: none;
+}
