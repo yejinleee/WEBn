@@ -22,18 +22,27 @@ function onLoginSubmit(event){
   event.preventDefault(); //브라우저가 동작하는걸(새로고침되는걸) 막음
   loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
-  localStorage.setItem("username",username);
+
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `Hi! ${username}`;
+  localStorage.setItem("username",username);
+  paintGreeting(username);
+  // greeting.classList.remove(HIDDEN_CLASSNAME);
+  // greeting.innerText = `Hi! ${username}`;
 }
 loginForm.addEventListener("submit",onLoginSubmit);
 
+function paintGreeting(username){
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innerText = `Hi! ${username}`;
+}
 const saveUserName = localStorage.getItem("username");
 if( saveUserName ===null){
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit",onLoginSubmit);
 }else{
-
+  paintGreeting(saveUserName);
+  // greeting.classList.remove(HIDDEN_CLASSNAME);
+  // greeting.innerText = `Hi! ${saveUserName}`;
 }
 
 const link = document.querySelector("a");
@@ -43,7 +52,7 @@ function handelLinkClick(event){
   console.dir(event); //클릭된 좌표값 screenX,Y, path 등 다양하게 확인 가능
   // alert("clicked");
 }
-link.addEventListener("click",handelLinkClick);
+// link.addEventListener("click",handelLinkClick);
 
 
 
