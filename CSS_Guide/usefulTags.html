@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>select ⊃ option</h2>
+    <select class="" name="">
+      <option value="">선택1</option>
+      <option value="">선택2</option>
+      <option value="">선택3</option>
+    </select>
+    <h2>textarea</h2>
+    <textarea name="name" rows="8" cols="80">사이즈를 조정할 수 있는 큰 인풋</textarea>
+    <h2>table ⊃ tr ⊃ td</h2>
+    <table>
+      <tr>
+        <td>한칸</td>
+        <td>한칸</td>
+        <td>한칸</td>
+      </tr>
+      <tr>
+        <td>한칸</td>
+        <td>한칸</td>
+        <td>한칸</td>
+      </tr>
+    </table>
+    <h2>semntic tags</h2>
+    <header> </header>
+    <footer></footer>
+    <nav></nav>
+    <section>
+
+    </section>
+    <article class="">
+
+    </article>
+    얘네들은 다 div랑 같음. 조금 더semantic 하게 만들때 골라쓰기
+    <h2>progress</h2>
+    <progress value="20" max="100"></progress>
+    max와 value 값만 지정해줌 됨.
+    <h2>meter</h2>
+    <meter value="30" min="0" max="100"></meter>
+    값이 높고 낮음에 따라 색이 다름.
+    progress는 진행상황 느낌으로 채워진다면 얘는 양에 따라.
+    pseudo-code로 더 커스터마이징 할 수 있음.
+    <h2>details 안에 summary</h2>
+    토글기능 가능
+    details에 open 속성해놓으면 열린게 디폴트
+    css에서 details[open]으로 열렸을때에만 적용될 css효과 설정 가능
+    <details>
+      <summary>who are you? // summary태그 : 클릭전볼수있는영역</summary>
+      <span>yejin! // 클릭후 보이게 되는 영역</span>
+    </details>
+    <h2>input type="week"</h2>
+    달력에서 주단위 선택
+    <input type="week" name="" value="">
+    <h2>input type="time"</h2>
+    하루 중 시간 선택
+    <input type="time" name="" value="">
+    <h2>picture</h2>
+    유저의 디바이스나 환경에 따라 다른 이미지 나타냄 <br>
+    picture 내 source와 img
+    <picture>
+      <source srcset="img/고구마.png" media="(min-width:1200px)">
+      <source srcset="img/춘식이.png" media="(min-width:900px)">
+      <source srcset="img/춘식.jpg" media="(min-width:500px)">
+      <img src="img/back.png" media="(min-width:1200px)">
+      <!-- media로 화면사이즈별로 다른 이미지 보여주는 걸 지정
+      img 태그 내 이미지는 디폴트값 -->
+    </picture>
+    <h2>datalist</h2>
+    JS없이 자동완성기능!!!!!!!!!! <br>
+    input에 사용한 list속성값을 datalist의 id로 줘야함 <br>
+    그 datalist안에 option 들 <br>
+    <label for="movie">What is your favorite movie?</label>
+    <input type="text" list="movie_options" name="" value="">
+    <datalist id="movie_options">
+      <option value="SpiderMan"></option>
+      <option value="The Artist"></option>
+      <option value="Iron Man"></option>
+      <option value="Dune"></option>
+      <option value="DODODO"></option>
+    </datalist>
+  </body>
+</html>
