@@ -6,14 +6,7 @@ const TODOS_KEY = "todos"
 
 function saveTodos(){
   localStorage.setItem(TODOS_KEY,JSON.stringify(todos));
-  // JSON.stringify : object나array나 어떤코드든 stirng 형으로 바꿔줌
-  // JSON.parse : string을 object 로 (Ex)JSON.parse(["1,2,3]")  -->> [1,2,3]
-
 }
-
-// function 필터함수(item){T/F로 반환할 조건과 return}
-// 적용할Array.filter(필터함수)
-
 
 function deleteTodo(e){
   // console.log(e.target.parentNode);
@@ -60,7 +53,6 @@ if (savedTodos !==null){
   // console.log(parsedTodos, typeof(parsedTodos))
 
   todos = parsedTodos;
-  // parsedTodos.forEach((e)=>{console.log("this is the turn of ",e);}));
   parsedTodos.forEach(paintTodo);
 }
 

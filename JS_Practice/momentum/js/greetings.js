@@ -3,6 +3,14 @@ const loginInput=loginForm.querySelector("input")
 const loginButton = loginForm.querySelector("button")
 const greeting = document.querySelector("#greeting")
 
+const test2 = document.querySelector("#test2");
+const test3 = document.querySelector("#test3");
+test2.addEventListener("click", function(){console.log(this)});
+// //this - > <span>
+test3.addEventListener("click", () => { console.log(this); });
+// //this - > Window
+
+
 function showId(){
   const inputValue = loginInput.value;
   if (inputValue ===""){
@@ -53,19 +61,3 @@ function handelLinkClick(event){
   // alert("clicked");
 }
 // link.addEventListener("click",handelLinkClick);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
