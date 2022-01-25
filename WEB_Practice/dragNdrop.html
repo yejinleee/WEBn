@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    .main_container {
+      margin: 0;
+      padding: 0;
+      background-color: #3d4e56fa;
+      display: flex;
+    }
+
+    button {
+      width: 70px;
+      height: 70px;
+      border: none;
+      border-radius: 8px;
+      margin: 12px;
+      cursor: move;
+      font-size: 30px;
+      background: #eaeaea4f;
+    }
+
+    .container {
+      margin: 10px;
+      padding: 10px;
+      background-color: #b5c1dc57;
+      border-radius: 8px;
+    }
+
+    .draggable.dragging {
+      opacity: 0.5;
+    }
+  </style>
+  <body>
+    <div class="main_container">
+      <div class="container">
+        <button class="draggable" draggable="true">🦊</button>
+        <button class="draggable" draggable="true">🐸</button>
+      </div>
+      <div class="container">
+        <button class="draggable" draggable="true">🐶</button>
+        <button class="draggable" draggable="true">🐱</button>
+      </div>
+    </div>
+
+    <div style="display:block !important;">
+      <details>
+        <summary>reduce()</summary>
+        arr.reduce(callback함수, 초기값)<br>
+        *callback 함수의 매개변수 <br>
+        &nbsp;&nbsp; accumulatr(누산기):이전 반환값. 초기값을 제공했을경우 그 초기값 <br>
+        &nbsp;&nbsp; currentValule(현재 값)<br>
+        &nbsp;&nbsp; currentIndex(처리할 현재 값 인덱스) : 디폴트1부터(초기값이 제공되었다면 0부터인거) <br>
+        *초기값 <br>
+        &nbsp;&nbsp; callback함수 최초 호출에 제공하는 값. 제공 안했다면 배열 첫번째 요소 <br>
+        [EX] <br>
+        [0, 1, 2, 3, 4].reduce( (prev, curr) => prev + curr ); <br>
+        >>> 10 <br>
+        [0, 1, 2, 3, 4].reduce( (prev, curr) => prev + curr ,10 ); <br>
+        >>> 20
+
+      </details>
+    </div>
+
+
+
+    <script src="dragNdrop.js"></script>
+  </body>
+</html>
