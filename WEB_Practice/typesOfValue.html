@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    div:not(.wrap,.explain){
+      border:1px solid grey;
+    }
+    .wrap{    }
+    .px{width:100px}
+    .em{width:10em;}
+    .rem{ width:10rem;}
+    .vw{ width:10vw}
+  </style>
+  <body>
+    <div class="wrap">
+      <div class="px">
+        it is px size
+      </div>
+      <div class="em">
+        it is em size
+      </div>
+      <div class="rem">
+        it is rem size
+      </div>
+      <div class="vw">
+        it is vw size
+      </div>
+    </div>
+    <br><br>
+    <div class="explain">
+      em : 부모의 글꼴 크기에 대해 비례 <br>
+      rem : root(< html >)의 글꼴 크기에 대해 비례 <br>
+      vw : 뷰포트너비에 따라 달라짐. 10vw면 뷰포트너비의 10% <br>
+      % : 부모 값에 대한 백분율
+    </div>
+  </body>
+</html>
